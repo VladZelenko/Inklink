@@ -73,7 +73,7 @@ add_action( 'customize_register', 'inklink_customize_register' );
 function mytheme_customize_css(){
 	?>
 	<style type="text/css">
-		.head-menu {background-color: <?php echo get_theme_mod('bg_top_navmenu'); ?>;}
+		.head-menu, .top-carousel .box-info .slide-btn:hover {background-color: <?php echo get_theme_mod('bg_top_navmenu'); ?>;}
 	</style>
 	<style type="text/css">
 		.accent-color, .nav li a:hover, #touch-menu:hover, .nav li:hover, .accent-color a {

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, .top-carousel .box-info p, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -2621,10 +2621,11 @@ th {
     max-width: 100% !important; }
   p,
   h2,
+  .top-carousel .box-info p,
   h3 {
     orphans: 3;
     widows: 3; }
-  h2,
+  h2, .top-carousel .box-info p,
   h3 {
     page-break-after: avoid; }
   .navbar {
@@ -3543,15 +3544,15 @@ hr {
 [role="button"] {
   cursor: pointer; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, .top-carousel .box-info p, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
   h1 small,
-  h1 .small, h2 small,
-  h2 .small, h3 small,
+  h1 .small, h2 small, .top-carousel .box-info p small,
+  h2 .small, .top-carousel .box-info p .small, h3 small,
   h3 .small, h4 small,
   h4 .small, h5 small,
   h5 .small, h6 small,
@@ -3568,15 +3569,16 @@ h1, h2, h3, h4, h5, h6,
     color: #777777; }
 
 h1, .h1,
-h2, .h2,
+h2,
+.top-carousel .box-info p, .h2,
 h3, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
   h1 small,
   h1 .small, .h1 small,
   .h1 .small,
-  h2 small,
-  h2 .small, .h2 small,
+  h2 small, .top-carousel .box-info p small,
+  h2 .small, .top-carousel .box-info p .small, .h2 small,
   .h2 .small,
   h3 small,
   h3 .small, .h3 small,
@@ -3602,7 +3604,7 @@ h6, .h6 {
 h1, .h1 {
   font-size: 36px; }
 
-h2, .h2 {
+h2, .top-carousel .box-info p, .h2 {
   font-size: 30px; }
 
 h3, .h3 {
@@ -8553,7 +8555,11 @@ button.close {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .nav li a,
 #touch-menu {
@@ -8577,7 +8583,7 @@ button.close {
   margin: 70px 0 100px 0;
   width: 100%;
   min-height: 600px; }
-  .top-carousel .content-box, .top-carousel .content-box img {
+  .top-carousel .content-box {
     position: relative;
     top: 0;
     left: 0; }
@@ -8615,9 +8621,29 @@ button.close {
     .top-carousel .box-info a {
       font: 400 21px "Open Sans", sans-serif;
       text-decoration: underline; }
-    .top-carousel .box-info span {
+    .top-carousel .box-info h2, .top-carousel .box-info p {
       color: #282828;
       font: 400 72px "Lora", sans-serif; }
+    .top-carousel .box-info p {
+      width: 270px;
+      margin: 0 auto;
+      font-size: 27px; }
+    .top-carousel .box-info .date {
+      display: block;
+      color: #8d8d8c;
+      font: italic 400 14px/52px "Open Sans", sans-serif; }
+    .top-carousel .box-info .slide-btn {
+      display: block;
+      width: 235px;
+      margin: 0 auto;
+      color: #282828;
+      font: 400 13px/50px "Open Sans", sans-serif;
+      border: 1px solid rgba(0, 0, 0, 0.65);
+      background: #ffffff;
+      text-decoration: none; }
+      .top-carousel .box-info .slide-btn:hover {
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out; }
 
 .site-footer {
   margin-top: 70px; }

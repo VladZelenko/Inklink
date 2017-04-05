@@ -2,7 +2,7 @@
 	margin: 70px 0 100px 0;
 	width: 100%;
 	min-height: 600px;
-	.content-box, .content-box img {
+	.content-box {
 		position: relative;
 		top: 0;
 		left: 0;
@@ -30,9 +30,31 @@
 			font: 400 21px $primary_font;
 			text-decoration: underline;
 		}
-		span {
+		h2 {
 			color: $secondary_font_color;
 			font: 400 72px $secondary_font;
+		}
+		p {
+			width: 270px;
+			margin: 0 auto;
+			@extend h2;
+			font-size: 27px;
+		}
+		.date {
+			display: block;
+			color: $p_font_color;
+			font: italic 400 14px/52px $primary_font;
+		}
+		.slide-btn {
+			display: block;
+			width: 235px;
+			margin: 0 auto;
+			color: $secondary_font_color;
+			font: 400 13px/50px $primary_font;
+			border: 1px solid rgba(0, 0, 0, 0.65);
+			background: $additional_color;
+			text-decoration: none;
+			&:hover {transition: all .3s ease-in-out;}
 		}
 	}
 }

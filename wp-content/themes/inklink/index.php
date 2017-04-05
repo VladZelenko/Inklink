@@ -25,10 +25,10 @@ get_header(); ?>
 					<div class="content">
 						<div class="box-info">
 							<i class="accent-color"><?php the_category(', '); ?></i>
-							<?php the_title(); ?>
+							<h2><?php the_title(); ?></h2>
 							<?php the_excerpt(); ?>
-							<?php the_time('j F Y' ); ?>
-							<a href="<?php the_permalink(); ?>">Read More</a>
+							<sapn class="date"><?php the_time('F j Y' ); ?></sapn>
+							<a href="<?php the_permalink(); ?>" class="slide-btn">Read More</a>
 						</div>
 					</div>
 				</div>
