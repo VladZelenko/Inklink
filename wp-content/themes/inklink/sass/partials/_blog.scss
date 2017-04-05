@@ -62,30 +62,22 @@
 	border-bottom: 1px solid #e9e9e9;
 	margin-bottom: 50px;
 	header {
-		.accent-color a {
+		.categoty a {
 			font: 400 14px $primary_font;
 			text-decoration: underline;
 			text-transform: uppercase;
 		}
 		h2 {margin: 0;}
 		.title a{
-			color: $secondary_font_color;
 			font: 400 21px $primary_font;
+			&:hover {text-decoration: none;}
 		}
-		.date {
-			color: #8d8d8c;
-			font: italic 400 12px/52px $primary_font;
-		}
+		.date {font: italic 400 12px/52px $primary_font;}
 	}
-	p {
-		color: $secondary_font_color;
-		font: 400 13px/20px $primary_font;
-	}
+	p {font: 400 13px/20px $primary_font;}
 	.post-btn {
 		font: 400 13px $primary_font;
-		&:hover {
-			text-decoration: none;
-		}
+		&:hover {text-decoration: none;}
 	}
 	footer {
 		width: 100%;

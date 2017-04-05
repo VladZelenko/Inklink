@@ -52,7 +52,7 @@ get_header(); ?>
 						</div>
 						<div class="col-md-7 col-lg-7">
 							<header>
-								<div class="accent-color"><?php the_category(', '); ?></div>
+								<div class="categoty"><?php the_category(', '); ?></div>
 								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 								<a href="<?php get_posts(); ?>" class="date"><?php the_time('F j Y'); ?></a>
 							</header>
@@ -62,7 +62,7 @@ get_header(); ?>
 						<footer>
 							<?php if ( is_active_sidebar( 'blog_post_area' ) ) : ?>
 								<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
-									<span>Share: </span><?php dynamic_sidebar( 'blog_post_area' ); ?>
+									<span class="post-social">Share: </span><?php dynamic_sidebar( 'blog_post_area' ); ?>
 								</div>
 							<?php endif; ?>
 							<div class="post-comments"><?php comments_number( 'no coments', '1 commtent', '% comments'); ?></div>
