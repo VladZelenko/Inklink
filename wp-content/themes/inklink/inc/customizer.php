@@ -50,13 +50,13 @@ function inklink_customize_register( $wp_customize ) {
 	//copyright
 	$wp_customize->add_setting('copy_right', array( 'default'=> ''));
 	$wp_customize->add_control(
-	'copy_right',
-	array(
-		'label'    => __( 'CopyRight', 'businessplus' ),
-		'section'  => 'footer_section',
-		'settings' => 'copy_right',
-		'type'     => 'textarea',
-		));
+		'copy_right',
+		array(
+			'label'    => __( 'CopyRight', 'businessplus' ),
+			'section'  => 'footer_section',
+			'settings' => 'copy_right',
+			'type'     => 'textarea',
+			));
 	//copyright - end
 
 	//background footer
@@ -67,6 +67,15 @@ function inklink_customize_register( $wp_customize ) {
 		'settings'   => 'footer_bg',
 		)));
 	//background footer - end
+
+	//color_link
+	$wp_customize->add_setting('color_link', array( 'default'=> '#ffffff'));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'color_link', array(
+		'label'      => __( 'Post bautton color', 'inklink' ),
+		'section'    => 'colors',
+		'settings'   => 'color_link',
+		)));
+	//color_link - end
 }
 add_action( 'customize_register', 'inklink_customize_register' );
 //background top navmenu
@@ -83,6 +92,11 @@ function mytheme_customize_css(){
 	<style type="text/css">
 		.copyright {
 			background-color: <?php echo get_theme_mod('footer_bg'); ?>;
+		}
+	</style>
+	<style type="text/css">
+		.post-btn {
+			color: <?php echo get_theme_mod('color_link'); ?>;
 		}
 	</style>
 	<?php

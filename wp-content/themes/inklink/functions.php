@@ -130,6 +130,20 @@ function slider_post_type() {
 }
 add_action( 'init', 'slider_post_type' );
 
+
+//post social
+register_sidebar( array(
+        'name' => __( 'Blog post', 'inklink' ),
+        'id' => 'blog_post_area',
+        'description' => __( 'Blog post area', 'inklink' ),
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
+//post social - end
+
+add_filter('excerpt_more', function($more) {
+    return '...';
+});
 /**
  * Enqueue scripts and styles.
  */

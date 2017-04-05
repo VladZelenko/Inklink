@@ -43,7 +43,7 @@ get_header(); ?>
 				<article class="post">
 					<div class="row">
 						<div class="col-md-5 col-lg-5">
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+							<a href="<?php the_permalink(); ?>""><?php the_post_thumbnail(); ?></a>
 							<?php if ( is_active_sidebar( '' ) ) : ?>
 								<div id="primary" role="complementary">
 									<?php dynamic_sidebar( '' ); ?>
@@ -52,16 +52,21 @@ get_header(); ?>
 						</div>
 						<div class="col-md-7 col-lg-7">
 							<header>
-								<?php the_category(', '); ?>
+								<div class="accent-color"><?php the_category(', '); ?></div>
 								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								<a href="<?php get_posts(); ?>"><?php the_time('F- j- Y'); ?></a>
+								<a href="<?php get_posts(); ?>" class="date"><?php the_time('F j Y'); ?></a>
 							</header>
 							<?php the_excerpt(); ?>
-							<footer>
-								<a href="<?php the_permalink(); ?>" class="post-btn">Read More</a>
-							</footer>
-							<?php comments_number( 'no coments', '1 commtent', '% comments'); ?>
+							<a href="<?php the_permalink(); ?>" class="post-btn">Read More</a>
 						</div>
+						<footer>
+							<?php if ( is_active_sidebar( 'blog_post_area' ) ) : ?>
+								<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+									<span>Share: </span><?php dynamic_sidebar( 'blog_post_area' ); ?>
+								</div>
+							<?php endif; ?>
+							<div class="post-comments"><?php comments_number( 'no coments', '1 commtent', '% comments'); ?></div>
+						</footer>
 					</div>
 				</article>
 			<?php endwhile; ?>
