@@ -76,7 +76,7 @@ function mytheme_customize_css(){
 		.head-menu {background-color: <?php echo get_theme_mod('bg_top_navmenu'); ?>;}
 	</style>
 	<style type="text/css">
-		.accent-color, .nav li a:hover, #touch-menu:hover, .nav li:hover {
+		.accent-color, .nav li a:hover, #touch-menu:hover, .nav li:hover, .accent-color a {
 			color: <?php echo get_theme_mod('accent_font_color'); ?>;
 		}
 	</style>

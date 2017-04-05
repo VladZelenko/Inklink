@@ -8544,47 +8544,80 @@ button.close {
     min-width: 280px;
     width: 100%;
     margin: 100px auto 80px auto; }
-  .site-header .nav {
-    width: 100%;
-    min-height: 50px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .site-header .nav li a,
-  .site-header #touch-menu {
-    display: block;
-    padding: 10px 20px;
-    color: rgba(0, 0, 0, 0.6);
-    font: 700 14px/24px "Oswald", sans-serif;
-    text-transform: uppercase; }
-  .site-header .nav li a:hover, .site-header #touch-menu:hover, .site-header .nav li:hover {
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out; }
-  .site-header #touch-menu {
-    display: none; }
-  .site-header #masthead {
-    top: 100px;
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: 50px; }
+
+.nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.nav li a,
+#touch-menu {
+  display: block;
+  padding: 10px 20px;
+  color: #9b9999;
+  font: 700 14px/24px "Open Sans", sans-serif;
+  text-transform: uppercase; }
+
+.nav li a:hover, #touch-menu:hover, .nav li:hover {
+  color: #f3b227;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+#touch-menu {
+  display: none; }
 
 .top-carousel {
   margin: 70px 0 100px 0;
   width: 100%;
-  min-height: 600px;
-  background: url("img/slide.png"); }
+  min-height: 600px; }
+  .top-carousel .content-box, .top-carousel .content-box img {
+    position: relative;
+    top: 0;
+    left: 0; }
+  .top-carousel .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    width: 100%;
+    min-height: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .top-carousel .box-info {
+    padding: 35px 0 50px 0;
+    max-width: 415px;
+    min-width: 280px;
+    width: 100%;
+    min-height: 415px;
+    background-color: rgba(255, 255, 255, 0.87);
+    text-align: center; }
+    .top-carousel .box-info a {
+      font: 400 21px "Open Sans", sans-serif;
+      text-decoration: underline; }
+    .top-carousel .box-info span {
+      color: #282828;
+      font: 400 72px "Lora", sans-serif; }
 
 .site-footer {
   margin-top: 70px; }

@@ -12,22 +12,4 @@ $(document).ready(function(){
 			menu.removeAttr('style');
 		}
 	});
-//fixed menu
-	var h_hght = 100; // отступ шапки от верха
-		var h_mrg = 0;	  // отступ когда шапка уже не видна
-		$(function(){
-			var elem = $('#menu');
-			var top = $(this).scrollTop();
-			if(top > h_hght){
-				elem.css('top', h_mrg);
-			}
-			$(window).scroll(function(){
-				top = $(this).scrollTop();
-				if (top+h_mrg < h_hght) {
-					elem.css('top', (h_hght-top));
-				} else {
-					elem.css('top', h_mrg);
-				}
-			});
-		});
 	});

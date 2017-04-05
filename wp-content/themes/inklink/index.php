@@ -15,7 +15,25 @@
 get_header(); ?>
 <div class="col-md-12 col-lg-12">
 	<div class="top-carousel">
-		
+		<?php
+		$query = new WP_Query( array('post_type' => 'slides', 'posts_per_page' => 100 ) );
+		if ($query->have_posts()):?>
+		<div class="row top-slider">
+			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<div class="col-md-12 col-lg-12 content-box">
+					<?php the_post_thumbnail('full', 'class=img-responsive'); ?>
+					<div class="content">
+						<div class="box-info">
+							<i class="accent-color"><?php the_category(', '); ?></i>
+							<?php the_title(); ?>
+							<?php the_excerpt(); ?>
+							<?php the_time('j F Y' ); ?>
+							<a href="<?php the_permalink(); ?>">Read More</a>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; ?>
+		<?php endif; wp_reset_postdata(); ?>
 	</div>
 </div>
 <div class="col-md-9 col-lg-9">

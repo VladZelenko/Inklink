@@ -2,5 +2,37 @@
 	margin: 70px 0 100px 0;
 	width: 100%;
 	min-height: 600px;
-	background: url('img/slide.png');
+	.content-box, .content-box img {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	.content {
+		display: flex;
+		flex-flow: column wrap;
+		width: 100%;
+		min-height: 100%;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.box-info {
+		padding: 35px 0 50px 0;
+		max-width: 415px;
+		min-width: 280px;
+		width: 100%;
+		min-height: 415px;
+		background-color: rgba(255, 255, 255, 0.87);
+		text-align: center;
+		a {
+			font: 400 21px $primary_font;
+			text-decoration: underline;
+		}
+		span {
+			color: $secondary_font_color;
+			font: 400 72px $secondary_font;
+		}
+	}
 }

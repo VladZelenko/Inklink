@@ -102,6 +102,34 @@ function inklink_widgets_init() {
 }
 add_action( 'widgets_init', 'inklink_widgets_init' );
 
+
+//top slider
+function slider_post_type() {
+    $args = array(
+      'label' => 'Head slider',   //название постайпа в меню
+      'public' => true,
+      'show_ui' => true,
+      'capability_type' => 'post',
+      'hierarchical' => false,
+      'rewrite' => array('slug' => 'slides'),
+      'query_var' => true,
+      'taxonomies'          => array( 'category' ),
+      'supports' => array(
+        'title',
+        'editor',
+        'excerpt',
+        'trackbacks',
+        'custom-fields',
+        'comments',
+        'revisions',
+        'thumbnail',
+        'author',
+        'page-attributes',)
+    );
+    register_post_type( 'slides', $args );
+}
+add_action( 'init', 'slider_post_type' );
+
 /**
  * Enqueue scripts and styles.
  */
