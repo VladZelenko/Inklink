@@ -8586,6 +8586,16 @@ button.close {
   min-height: 600px;
   background: url("img/slide.png"); }
 
+.site-footer {
+  margin-top: 70px; }
+  .site-footer .gallery-instagram {
+    width: 100%;
+    min-height: 325px;
+    background: #ccc; }
+  .site-footer .copyright {
+    width: 100%;
+    min-height: 100px; }
+
 @media (min-width: 320px) and (max-width: 768px) {
   .nav {
     display: none; }

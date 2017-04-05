@@ -15,11 +15,20 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inklink' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'inklink' ), 'WordPress' ); ?></a>
-		<span class="sep"> | </span>
-		<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'inklink' ), 'inklink', '<a href="https://automattic.com/" rel="designer">Underscores.me</a>' ); ?>
-	</div><!-- .site-info -->
+	<div class="gallery-instagram">
+		
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-lg-4"></div>
+				<div class="col-md-4 col-lg-4"></div>
+				<div class="col-md-4 col-lg-4">
+					<?php echo get_theme_mod('copy_right'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
