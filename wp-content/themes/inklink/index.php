@@ -13,44 +13,44 @@
  */
 
 get_header(); ?>
-
+<div class="col-md-12 col-lg-12">
+	<div class="top-carousel">
+		
+	</div>
+</div>
+<div class="col-md-9 col-lg-9">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+			<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); ?>
+				<article class="post">
+					<div class="row">
+						<div class="col-md-5 col-lg-5">
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+							<?php if ( is_active_sidebar( '' ) ) : ?>
+								<div id="primary" role="complementary">
+									<?php dynamic_sidebar( '' ); ?>
+								</div>
+							<?php endif; ?>
+						</div>
+						<div class="col-md-7 col-lg-7">
+							<header>
+								<?php the_category(', '); ?>
+								<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<a href="<?php get_posts(); ?>"><?php the_time('F- j- Y'); ?></a>
+							</header>
+							<?php the_excerpt(); ?>
+							<footer>
+								<a href="<?php the_permalink(); ?>" class="post-btn">Read More</a>
+							</footer>
+							<?php comments_number( 'no coments', '1 commtent', '% comments'); ?>
+						</div>
+					</div>
+				</article>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	</main><!-- #main -->
+</div><!-- #primary -->
+</div>
 <?php
 get_sidebar();
 get_footer();

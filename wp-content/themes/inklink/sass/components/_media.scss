@@ -1,0 +1,26 @@
+//header nav menu
+@media (min-width: 320px) and (max-width: 768px) {
+	.nav {
+		display: none;
+		li a {
+			border-top: 1px solid #ccc;
+			background: $additional_color;
+
+			&:hover {
+				background: #f0f0f0;
+				color: $accent_color;
+				border-left: 3px solid $accent_color;
+			}
+		}
+	}
+	.nav li:first-child a {border-top: none;}
+	#touch-menu {
+		min-height: 50px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		text-decoration: none;
+		.fa-bars {font-size: 22px;}
+	}
+}
+//header nav menu - end
