@@ -8695,6 +8695,46 @@ button.close {
     color: #282828;
     font: 400 17px "Open Sans", sans-serif; }
 
+aside h2.widget-title, aside .top-carousel .box-info p.widget-title, .top-carousel .box-info aside p.widget-title {
+  width: 275px;
+  border: 1px solid #f3b227;
+  font: 400 12px/50px "Open Sans", sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+aside .widget_wpc_about_me_image div {
+  width: 275px; }
+
+aside .widget_wpc_about_me_image img {
+  margin: 15px 0 35px 0; }
+
+aside .sfmsb_widget h2.widget-title, aside .sfmsb_widget .top-carousel .box-info p.widget-title, .top-carousel .box-info aside .sfmsb_widget p.widget-title {
+  margin-bottom: 35px; }
+
+aside #buffercode_banner_upload_info-3 h2.widget-title, aside #buffercode_banner_upload_info-3 .top-carousel .box-info p.widget-title, .top-carousel .box-info aside #buffercode_banner_upload_info-3 p.widget-title {
+  display: none; }
+
+aside #buffercode_banner_upload_info-3 img {
+  margin-top: 35px; }
+
+aside .widget .sp-latest-posts-widget.latest-posts .entry-title a {
+  color: #secondary_font_color;
+  font: 400 13px "Open Sans", sans-serif; }
+
+aside .widget_tag_cloud .tagcloud a {
+  float: left;
+  margin: 5px 5px 5px 0;
+  max-width: 120px;
+  display: block;
+  padding: 10px 25px;
+  color: #secondary_font_color;
+  font: 300 12px "Open Sans", sans-serif;
+  -webkit-border-radius: 30px;
+          border-radius: 30px;
+  background-color: #e5e5e5;
+  text-align: center;
+  text-transform: uppercase; }
+
 .site-footer {
   margin-top: 70px;
   width: 100%;
@@ -8755,4 +8795,9 @@ button.close {
             align-items: center;
     text-decoration: none; }
     #touch-menu .fa-bars {
-      font-size: 22px; } }
+      font-size: 22px; }
+  .site-footer .flexbox {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }

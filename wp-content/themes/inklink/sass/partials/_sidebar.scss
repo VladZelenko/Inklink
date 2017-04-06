@@ -1,0 +1,40 @@
+aside {
+	h2.widget-title {
+		width: 275px;
+		border: 1px solid #f3b227;
+		font: 400 12px/50px $primary_font;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.widget_wpc_about_me_image {
+		div {width: 275px;}
+		img {margin: 15px 0 35px 0;}
+	}
+	.sfmsb_widget {
+		h2.widget-title {margin-bottom: 35px;}
+	}
+	#buffercode_banner_upload_info-3 {
+		h2.widget-title {display: none;}
+		img {margin-top: 35px;}
+	}
+	.widget .sp-latest-posts-widget.latest-posts .entry-title a {
+		color: #secondary_font_color;
+		font: 400 13px $primary_font;
+	}
+	.widget_tag_cloud {
+		.tagcloud a {
+			float: left;
+			margin: 5px 5px 5px 0;
+			max-width: 120px;
+			display: block;
+			padding: 10px 25px;
+			color: #secondary_font_color;
+			font: 300 12px $primary_font;
+			border-radius: 30px;
+			background-color: #e5e5e5;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}
+
