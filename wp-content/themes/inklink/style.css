@@ -8724,7 +8724,6 @@ button.close {
       background: #ffffff; }
       .nav li a:hover {
         background: #f0f0f0;
-        color: #f3b227;
         border-left: 3px solid #f3b227; }
   .nav li:first-child a {
     border-top: none; }

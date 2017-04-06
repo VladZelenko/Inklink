@@ -30,14 +30,16 @@
 				<div class="head-menu" id="menu">
 					<a href="#" id="touch-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
 					<nav>
-						<ul class="nav accent-color clearfix">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Features</a></li>
-							<li><a href="#">Categories</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">Search</a></li>
-						</ul>
+						<?php
+						if( has_nav_menu('menu-1') ){
+							wp_nav_menu( array(
+								'theme-location' => 'menu-1',
+								'container' => false,
+								'menu_class' => 'nav clearfix',
+								'depth' => 1
+								));
+						}
+						?>
 					</nav>
 				</div>
 			</div>
