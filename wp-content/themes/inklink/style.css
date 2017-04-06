@@ -8693,26 +8693,9 @@ button.close {
     font: 400 17px "Open Sans", sans-serif; }
 
 .site-footer {
-  margin-top: 70px; }
-  .site-footer .gallery {
-    width: 100%;
-    min-height: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row nowrap;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .site-footer .footer-widget-area {
-    width: 100%;
-    min-height: 100px; }
+  margin-top: 70px;
+  width: 100%;
+  min-height: 100px; }
   .site-footer .flexbox {
     display: -webkit-box;
     display: -webkit-flex;

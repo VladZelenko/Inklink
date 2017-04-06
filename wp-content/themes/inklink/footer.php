@@ -15,18 +15,6 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="gallery">
-		<?php
-		$query = new WP_Query( array('post_type' => 'gallery', 'posts_per_page' => 100 ) );
-		if ($query->have_posts()):?>
-		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-			<div class="gallery-img">
-				<?php the_post_thumbnail('full', 'class=img-responsive'); ?>
-			</div>
-		<?php endwhile; ?>
-	<?php endif; wp_reset_postdata(); ?>
-</div>
-<div class="footer-widget-area">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-lg-4">
@@ -48,7 +36,6 @@
 			</div>
 		</div>
 	</div>
-</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

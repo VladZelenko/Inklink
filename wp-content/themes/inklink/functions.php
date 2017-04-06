@@ -156,32 +156,7 @@ function slider_post_type() {
 }
 add_action( 'init', 'slider_post_type' );
 
-//footer gallery
-function footer_gallery_post_type() {
-	$args = array(
-      'label' => 'Footer gallery',
-      'public' => true,
-      'show_ui' => true,
-      'capability_type' => 'post',
-      'hierarchical' => false,
-      'rewrite' => array('slug' => 'gallery'),
-      'query_var' => true,
-      'taxonomies'          => array( 'category' ),
-      'supports' => array(
-      	'title',
-      	'editor',
-      	'excerpt',
-      	'trackbacks',
-      	'custom-fields',
-      	'comments',
-      	'revisions',
-      	'thumbnail',
-      	'author',
-      	'page-attributes',)
-      );
-	register_post_type( 'gallery', $args );
-}
-add_action( 'init', 'footer_gallery_post_type' );
+
 
 
 add_filter('excerpt_more', function($more) {

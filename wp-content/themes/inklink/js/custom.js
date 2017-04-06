@@ -1,3 +1,4 @@
+//header navmenu
 $(document).ready(function(){
 	var touch = $('#touch-menu');
 	var menu = $('.nav');
@@ -13,7 +14,7 @@ $(document).ready(function(){
 		}
 	});
 });
-
+//top slider
 $('.top-slider').slick({
 	infinite: true,
 	speed: 1500,
