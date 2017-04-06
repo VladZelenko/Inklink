@@ -33,7 +33,7 @@
 						<?php
 						if( has_nav_menu('menu-1') ){
 							wp_nav_menu( array(
-								'theme-location' => 'menu-1',
+								'theme_location' => 'menu-1',
 								'container' => false,
 								'menu_class' => 'nav clearfix',
 								'depth' => 1

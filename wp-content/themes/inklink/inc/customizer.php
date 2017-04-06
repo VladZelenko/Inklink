@@ -34,14 +34,6 @@ function inklink_customize_register( $wp_customize ) {
 
 	//***************************HEADER*************************************************************
 	//
-	//background top navmenu
-	$wp_customize->add_setting('bg_top_navmenu', array( 'default'=> ''));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_top_navmenu', array(
-		'label'      => __( 'Background header menu', 'inklink' ),
-		'section'    => 'colors',
-		'settings'   => 'bg_top_navmenu',
-		)));
-	//background top navmenu - end
 
 	//nav menu font color
 	$wp_customize->add_setting('navmenu_font_color', array( 'default'=> ''));
@@ -49,6 +41,7 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Menu font color', 'inklink' ),
 		'section'    => 'colors',
 		'settings'   => 'navmenu_font_color',
+		'priority'	 => '30',
 		)));
 	//nav menu font color - end
 
@@ -58,8 +51,19 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Menu hover font color', 'inklink' ),
 		'section'    => 'colors',
 		'settings'   => 'navmenu_hover_font',
+		'priority'	 => '40',
 		)));
 	//nav menu hover font color - end
+
+	//background top navmenu
+	$wp_customize->add_setting('bg_top_navmenu', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bg_top_navmenu', array(
+		'label'      => __( 'Background header menu', 'inklink' ),
+		'section'    => 'colors',
+		'settings'   => 'bg_top_navmenu',
+		'priority'	 => '50',
+		)));
+	//background top navmenu - end
 	//
 	//**************************************************************************************************
 
@@ -72,26 +76,9 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Background posts', 'inklink' ),
 		'section'    => 'content_section',
 		'settings'   => 'bg_posts',
+		'priority'	 => '10',
 		)));
 	//background post - end
-
-	//Title post color
-	$wp_customize->add_setting('title_post_color', array( 'default'=> ''));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'title_post_color', array(
-		'label'      => __( 'Title posts color', 'inklink' ),
-		'section'    => 'content_section',
-		'settings'   => 'title_post_color',
-		)));
-	//Title post color - end
-
-	//paragraph post color
-	$wp_customize->add_setting('p_post_color', array( 'default'=> ''));
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'p_post_color', array(
-		'label'      => __( 'Paragraph posts color', 'inklink' ),
-		'section'    => 'content_section',
-		'settings'   => 'p_post_color',
-		)));
-	//paragraph post color - end
 
 	//Categoty post color
 	$wp_customize->add_setting('category_post_color', array( 'default'=> ''));
@@ -99,8 +86,19 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Category posts color', 'inklink' ),
 		'section'    => 'content_section',
 		'settings'   => 'category_post_color',
+		'priority'	 => '20',
 		)));
 	//Categoty post color - end
+
+	//Title post color
+	$wp_customize->add_setting('title_post_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'title_post_color', array(
+		'label'      => __( 'Title posts color', 'inklink' ),
+		'section'    => 'content_section',
+		'settings'   => 'title_post_color',
+		'priority'	 => '30',
+		)));
+	//Title post color - end
 
 	//Date post color
 	$wp_customize->add_setting('date_post_color', array( 'default'=> ''));
@@ -108,15 +106,27 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Date posts color', 'inklink' ),
 		'section'    => 'content_section',
 		'settings'   => 'date_post_color',
+		'priority'	 => '40',
 		)));
 	//Date post color - end
 
-	//color_link
+	//paragraph post color
+	$wp_customize->add_setting('p_post_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'p_post_color', array(
+		'label'      => __( 'Paragraph posts color', 'inklink' ),
+		'section'    => 'content_section',
+		'settings'   => 'p_post_color',
+		'priority'	 => '50',
+		)));
+	//paragraph post color - end
+
+	//color_link, button
 	$wp_customize->add_setting('color_link', array( 'default'=> ''));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'color_link', array(
 		'label'      => __( 'Post bautton color', 'inklink' ),
 		'section'    => 'content_section',
 		'settings'   => 'color_link',
+		'priority'	 => '60',
 		)));
 	//color_link - end
 
@@ -126,6 +136,7 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Comment posts color', 'inklink' ),
 		'section'    => 'content_section',
 		'settings'   => 'comments_post_color',
+		'priority'	 => '70',
 		)));
 	//Title socil icons and comments post color - end
 	//******************************************************************************************************
@@ -150,6 +161,7 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Copy Right color', 'inklink' ),
 		'section'    => 'colors',
 		'settings'   => 'copy_right_color',
+		'priority'	 => '60',
 		)));
 	//copyright ont color - end
 
@@ -159,6 +171,7 @@ function inklink_customize_register( $wp_customize ) {
 		'label'      => __( 'Background footer', 'inklink' ),
 		'section'    => 'colors',
 		'settings'   => 'footer_bg',
+		'priority'	 => '70',
 		)));
 	//background footer - end
 	//

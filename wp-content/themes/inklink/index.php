@@ -36,6 +36,7 @@ get_header(); ?>
 		<?php endif; wp_reset_postdata(); ?>
 	</div>
 </div>
+</div>
 <div class="col-md-9 col-lg-9">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -74,6 +75,7 @@ get_header(); ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 </div>
+<?php the_posts_pagination(['mid_size' => 1])?>
 <?php
 get_sidebar();
 get_footer();

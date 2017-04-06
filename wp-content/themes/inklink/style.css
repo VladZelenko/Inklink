@@ -8585,6 +8585,9 @@ button.close {
     position: relative;
     top: 0;
     left: 0; }
+    .top-carousel .content-box img {
+      min-height: 400px;
+      background-size: cover; }
   .top-carousel .content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8717,6 +8720,15 @@ button.close {
             align-items: center; }
 
 @media (min-width: 320px) and (max-width: 768px) {
+  .top-carousel {
+    margin: 0; }
+  .site-header {
+    width: 100%; }
+    .site-header .site-branding {
+      max-width: 400px;
+      min-width: 280px;
+      width: 100%;
+      margin: 30px auto 30px auto; }
   .nav {
     display: none; }
     .nav li a {

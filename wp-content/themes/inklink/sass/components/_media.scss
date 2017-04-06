@@ -1,5 +1,17 @@
 //header nav menu
 @media (min-width: 320px) and (max-width: 768px) {
+	.top-carousel {
+		margin: 0;
+	}
+	.site-header {
+		width: 100%;
+		.site-branding {
+			max-width: 400px;
+			min-width: 280px;
+			width: 100%;
+			margin: 30px auto 30px auto;
+		}
+	}
 	.nav {
 		display: none;
 		li a {

@@ -24,3 +24,4 @@ $('.top-slider').slick({
   autoplaySpeed: 1500,
   'arrows': true,
 });
+
