@@ -16,12 +16,10 @@
 #touch-menu {
 	display: block;
 	padding: 10px 20px;
-	color: $primary_font_color;
 	font: 700 14px/24px $primary_font;
 	text-transform: uppercase;
 }
 .nav li a:hover, #touch-menu:hover, .nav li:hover {
-	color: $accent_color;
 	text-decoration: none;
 	background-color: transparent;
 	transition: all .3s ease-in-out;

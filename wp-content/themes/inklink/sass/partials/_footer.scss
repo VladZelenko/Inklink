@@ -1,9 +1,11 @@
 .site-footer {
 	margin-top: 70px;
-	.gallery-instagram {
+	.gallery {
 		width: 100%;
-		min-height: 325px;
-		background: #ccc;
+		min-height: auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
 	}
 	.footer-widget-area {
 		width: 100%;

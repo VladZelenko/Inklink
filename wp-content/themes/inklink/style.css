@@ -8565,12 +8565,10 @@ button.close {
 #touch-menu {
   display: block;
   padding: 10px 20px;
-  color: #9b9999;
   font: 700 14px/24px "Open Sans", sans-serif;
   text-transform: uppercase; }
 
 .nav li a:hover, #touch-menu:hover, .nav li:hover {
-  color: #f3b227;
   text-decoration: none;
   background-color: transparent;
   -webkit-transition: all .3s ease-in-out;
@@ -8696,10 +8694,22 @@ button.close {
 
 .site-footer {
   margin-top: 70px; }
-  .site-footer .gallery-instagram {
+  .site-footer .gallery {
     width: 100%;
-    min-height: 325px;
-    background: #ccc; }
+    min-height: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .site-footer .footer-widget-area {
     width: 100%;
     min-height: 100px; }

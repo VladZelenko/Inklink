@@ -15,32 +15,40 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-	<div class="gallery-instagram">
-		
-	</div>
-	<div class="footer-widget-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-lg-4">
-					<?php if ( is_active_sidebar( 'footer_sidebar_area-1' ) ) : ?>
-						<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
-							<?php dynamic_sidebar( 'footer_sidebar_area-1' ); ?>
-						</div>
-					<?php endif; ?>
-				</div>
-				<div class="col-md-4 col-lg-4">
-					<?php if ( is_active_sidebar( 'footer_sidebar_area-2' ) ) : ?>
-						<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
-							<?php dynamic_sidebar( 'footer_sidebar_area-2' ); ?>
-						</div>
-					<?php endif; ?>
-				</div>
-				<div class="col-md-4 col-lg-4 flexbox">
-					<div class="copyright"><?php echo get_theme_mod('copy_right'); ?></div>
-				</div>
+	<div class="gallery">
+		<?php
+		$query = new WP_Query( array('post_type' => 'gallery', 'posts_per_page' => 100 ) );
+		if ($query->have_posts()):?>
+		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+			<div class="gallery-img">
+				<?php the_post_thumbnail('full', 'class=img-responsive'); ?>
+			</div>
+		<?php endwhile; ?>
+	<?php endif; wp_reset_postdata(); ?>
+</div>
+<div class="footer-widget-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-lg-4">
+				<?php if ( is_active_sidebar( 'footer_sidebar_area-1' ) ) : ?>
+					<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+						<?php dynamic_sidebar( 'footer_sidebar_area-1' ); ?>
+					</div>
+				<?php endif; ?>
+			</div>
+			<div class="col-md-4 col-lg-4">
+				<?php if ( is_active_sidebar( 'footer_sidebar_area-2' ) ) : ?>
+					<div id=f ( $image_src = wp_get_attachment_image_src( $thumbnail_id, 'normal-bg' ) )"primary" role="complementary">
+						<?php dynamic_sidebar( 'footer_sidebar_area-2' ); ?>
+					</div>
+				<?php endif; ?>
+			</div>
+			<div class="col-md-4 col-lg-4 flexbox">
+				<div class="copyright"><?php echo get_theme_mod('copy_right'); ?></div>
 			</div>
 		</div>
 	</div>
+</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -42,6 +42,24 @@ function inklink_customize_register( $wp_customize ) {
 		'settings'   => 'bg_top_navmenu',
 		)));
 	//background top navmenu - end
+
+	//nav menu font color
+	$wp_customize->add_setting('navmenu_font_color', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'navmenu_font_color', array(
+		'label'      => __( 'Menu font color', 'inklink' ),
+		'section'    => 'colors',
+		'settings'   => 'navmenu_font_color',
+		)));
+	//nav menu font color - end
+
+		//nav menu hover font color
+	$wp_customize->add_setting('navmenu_hover_font', array( 'default'=> ''));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'navmenu_hover_font', array(
+		'label'      => __( 'Menu hover font color', 'inklink' ),
+		'section'    => 'colors',
+		'settings'   => 'navmenu_hover_font',
+		)));
+	//nav menu hover font color - end
 	//
 	//**************************************************************************************************
 
@@ -161,13 +179,15 @@ add_action( 'customize_register', 'inklink_customize_register' );
 function mytheme_customize_css(){
 	?>
 	<style type="text/css">
-		.accent-color, .nav li a:hover, #touch-menu:hover, .nav li:hover, .accent-color a {color: <?php echo get_theme_mod('accent_font_color'); ?>;}
+		.accent-color {color: <?php echo get_theme_mod('accent_font_color'); ?>;}
 		.post-btn {color: <?php echo get_theme_mod('color_link'); ?>;}
 		.post p {color: <?php echo get_theme_mod('p_post_color'); ?>;}
 		.post header .date {color: <?php echo get_theme_mod('date_post_color'); ?>;}
 		.post header .categoty a {color: <?php echo get_theme_mod('category_post_color'); ?>;}
 		.post header .title a {color: <?php echo get_theme_mod('title_post_color'); ?>;}
 		.copyright {color: <?php echo get_theme_mod('copy_right_color'); ?>;}
+		.nav li a, #touch-menu {color: <?php echo get_theme_mod('navmenu_font_color'); ?>;}
+		.nav li a:hover, #touch-menu:hover, .nav li:hover, .accent-color a {color: <?php echo get_theme_mod('navmenu_hover_font'); ?>;}
 		.post .post-comments, .post-social {color: <?php echo get_theme_mod('comments_post_color'); ?>;}
 		.head-menu, .top-carousel .box-info .slide-btn:hover {background-color: <?php echo get_theme_mod('bg_top_navmenu'); ?>;}
 		.footer-widget-area {background-color: <?php echo get_theme_mod('footer_bg'); ?>;}
