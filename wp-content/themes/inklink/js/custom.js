@@ -12,4 +12,14 @@ $(document).ready(function(){
 			menu.removeAttr('style');
 		}
 	});
-	});
+});
+
+$('.top-slider').slick({
+	infinite: true,
+	speed: 1500,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+  autoplaySpeed: 1500,
+  'arrows': true,
+});

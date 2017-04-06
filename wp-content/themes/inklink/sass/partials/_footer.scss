@@ -9,7 +9,11 @@
 		width: 100%;
 		min-height: 100px;
 	}
-	.copyright {
-		
+	.flexbox {
+		display: flex;
+		flex-flow: row wrap;
+		min-height: 100px;
+		justify-content: flex-end;
+		align-items: center;
 	}
 }

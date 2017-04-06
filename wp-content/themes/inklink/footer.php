@@ -35,7 +35,7 @@
 						</div>
 					<?php endif; ?>
 				</div>
-				<div class="col-md-4 col-lg-4">
+				<div class="col-md-4 col-lg-4 flexbox">
 					<div class="copyright"><?php echo get_theme_mod('copy_right'); ?></div>
 				</div>
 			</div>
