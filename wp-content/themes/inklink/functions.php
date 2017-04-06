@@ -102,10 +102,36 @@ function inklink_widgets_init() {
 }
 add_action( 'widgets_init', 'inklink_widgets_init' );
 
+//********************************Post social*******************************
+register_sidebar( array(
+	'name' => __( 'Blog post', 'inklink' ),
+	'id' => 'blog_post_area',
+	'description' => __( 'Blog post area', 'inklink' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+//**************************************************************************
+
+//******************************Footer sidebar area*************************
+register_sidebar( array(
+	'name' => __( 'Footer sidebar area 1', 'inklink' ),
+	'id' => 'footer_sidebar_area-1',
+	'description' => __( 'Footer sidebar area 1', 'inklink' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+register_sidebar( array(
+	'name' => __( 'Footer sidebar area 2', 'inklink' ),
+	'id' => 'footer_sidebar_area-2',
+	'description' => __( 'Footer sidebar area 2', 'inklink' ),
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+	) );
+//***************************************************************************
 
 //top slider
 function slider_post_type() {
-    $args = array(
+	$args = array(
       'label' => 'Head slider',   //название постайпа в меню
       'public' => true,
       'show_ui' => true,
@@ -115,34 +141,26 @@ function slider_post_type() {
       'query_var' => true,
       'taxonomies'          => array( 'category' ),
       'supports' => array(
-        'title',
-        'editor',
-        'excerpt',
-        'trackbacks',
-        'custom-fields',
-        'comments',
-        'revisions',
-        'thumbnail',
-        'author',
-        'page-attributes',)
-    );
-    register_post_type( 'slides', $args );
+      	'title',
+      	'editor',
+      	'excerpt',
+      	'trackbacks',
+      	'custom-fields',
+      	'comments',
+      	'revisions',
+      	'thumbnail',
+      	'author',
+      	'page-attributes',)
+      );
+	register_post_type( 'slides', $args );
 }
 add_action( 'init', 'slider_post_type' );
 
 
-//post social
-register_sidebar( array(
-        'name' => __( 'Blog post', 'inklink' ),
-        'id' => 'blog_post_area',
-        'description' => __( 'Blog post area', 'inklink' ),
-        'before_title' => '<h3>',
-        'after_title' => '</h3>',
-    ) );
-//post social - end
+
 
 add_filter('excerpt_more', function($more) {
-    return '...';
+	return '...';
 });
 /**
  * Enqueue scripts and styles.
